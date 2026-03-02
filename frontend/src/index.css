@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-medical-bg text-medical-text font-sans antialiased overflow-hidden;
+  }
+}
+
+/* Radiology Console Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-medical-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-medical-surface rounded hover:bg-medical-muted/30 transition-colors border border-medical-bg;
+}
+
+canvas {
+  image-rendering: pixelated;
+  /* Sharpness for the grid */
+}
